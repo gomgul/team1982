@@ -62,3 +62,4 @@ local.properties
 #.project
 .metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
 *.log
+*.log
