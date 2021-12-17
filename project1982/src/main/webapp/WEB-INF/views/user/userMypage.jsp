@@ -17,7 +17,7 @@
         <header class="header" >
             <!-- 로고-->
                <div>
-               <a href="login.do" class="logo">
+               <a href="../main.do" class="logo">
                    <h1>1982</h1>
                </a>
                </div>
@@ -53,15 +53,16 @@
             <form action="">
             <ul class="left_nav">
                 <li class="left_nav_text"><a class="home" href="#">홈</a></li>
-                <li class="left_nav_text"><a href="#">새소식</a></li>
-                <li class="left_nav_text"><a href="#">상품</a></li>
-                <li class="left_nav_text"><a href="#">회사</a></li>
+                <li class="left_nav_text"><a href="#1">프로필 수정</a></li>
+                <li class="left_nav_text"><a href="#2">업체지원현황</a></li>
+                <li class="left_nav_text"><a href="#3">찜한 점포</a></li>
+                <li class="left_nav_text"><a href="#4">입출금 내역</a></li>
             </ul>
 
             <div class="body_container"> <!-- 페이지 컨테이너 시작-->
          
                 <div class="body_container_center"> <!-- 중간 메뉴바 시작-->
-                    <div>업체 등록 / 수정</div>
+                    <div id="1">프로필 수정</div>
                         <div class="body_container_center_shop_contanier">
                             <div class="body_container_center_shop_contanier_img">
                                 <div ><img src="" alt="">이미지 넣을 장소 <button>이미지 추가</button></div>
@@ -89,7 +90,7 @@
                     
                     
                     
-                    <div>업체 등록 현황</div>
+                    <div id="2">업체지원현황</div>
                     <div>
                         <div class="divTable minimalistBlack">
                             <div class="divTableHeading">
@@ -155,7 +156,7 @@
               
                     </div>
 
-                    <div>구직자 신청 현황</div>
+                    <div id="3">내가 찜한 점포</div>
                     <div>
                         <div>
                             
@@ -218,7 +219,7 @@
                            
                             </div>
 
-                            <div>출근 현황</div>
+                            <div id="4">입출금 내역</div>
                     <div>
                         <div class="divTable minimalistBlack">
                             <div class="divTableHeading">
