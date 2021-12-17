@@ -224,7 +224,7 @@ dependencies {&#xD;
     </author>
     <id>tag:spring.io,2021-12-16:4643</id>
     <updated>2021-12-16T04:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, we continue our tour of all things &lt;code&gt;@Controller&lt;/code&gt; by looking at the nascent &lt;a href="https://github.com/spring-projects/spring-grapqhl"&gt;Spring GraphQL&lt;/a&gt; project&lt;/p&gt;
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, we continue our tour of all things &lt;code&gt;@Controller&lt;/code&gt; by looking at the nascent &lt;a href="https://github.com/spring-projects/spring-graphql"&gt;Spring GraphQL&lt;/a&gt; project&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/eVqmB2hsIVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
