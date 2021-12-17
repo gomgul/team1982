@@ -110,3 +110,4 @@ local.properties
 Servers/Tomcat v8.0 Server at localhost-config/server.xml
 .metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
 .metadata/.log
+*.log
