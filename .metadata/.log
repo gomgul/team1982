@@ -267,3 +267,9 @@ java.io.FileNotFoundException: C:\Users\Kosmo\Documents\GitHub\team1982\.metadat
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-12-17 19:03:21.547
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-12-17 19:03:21.548
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
