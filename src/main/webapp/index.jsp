@@ -16,7 +16,7 @@
         <header class="header" >
          <!-- 로고-->
             
-            <a href="main.do" class="logo">
+  
                 <img src="./3.jpg"/>
             </a>
             
