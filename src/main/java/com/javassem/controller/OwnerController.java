@@ -11,5 +11,7 @@ public class OwnerController {
 		@RequestMapping("{step}.do")
 		public String userJoin(@PathVariable String step){
 			return "/owner/" + step;
+			
 		}	
 }
+

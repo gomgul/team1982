@@ -11,6 +11,7 @@ public class UserController {
 	@RequestMapping("{step}.do")
 	public String userJoin(@PathVariable String step){
 		return step;
+		
 	}
 
 }
