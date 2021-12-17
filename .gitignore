@@ -66,3 +66,7 @@ local.properties
 *.log
 *.snap
 *.snap
+.metadata/.log
+.metadata/.log
+.metadata/.plugins/org.eclipse.core.resources/.history/1/70b7c477175f001c1aceed8002e04a7b
+.metadata/.plugins/org.eclipse.core.resources/.history/1/70b7c477175f001c1aceed8002e04a7b
