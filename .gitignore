@@ -1,122 +1,68 @@
-# Created by https://www.toptal.com/developers/gitignore/api/eclipse,java 
-# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,java 
-mybatis-config.xml 
-log4j.xml 
-lecture 
-target 
-pom.properties 
-.classpath 
-MANIFEST.MF 
+.metadata
+.metadata/
+.metadata\
+/metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
 
-### Eclipse ### 
-.metadata 
-bin/ 
-tmp/ 
-*.tmp 
-*.bak 
-*.swp 
-*~.nib 
-local.properties 
-.settings/ 
-.loadpath 
-.recommenders 
+# External tool builders
+.externalToolBuilders/
 
-# External tool builders 
-.externalToolBuilders/ 
+# Locally stored "Eclipse launch configurations"
+*.launch
 
-# Locally stored "Eclipse launch configurations" 
-*.launch # PyDev specific (Python IDE for Eclipse) 
-*.pydevproject 
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
 
-# CDT-specific (C/C++ Development Tooling) 
-.cproject 
+# CDT-specific (C/C++ Development Tooling)
+.cproject
 
-# CDT- autotools 
-.autotools 
+# CDT- autotools
+.autotools
 
-# Java annotation processor (APT) 
-.factorypath 
+# Java annotation processor (APT)
+.factorypath
 
-# PDT-specific (PHP Development Tools) 
-.buildpath 
+# PDT-specific (PHP Development Tools)
+.buildpath
 
-# sbteclipse plugin 
-.target 
+# sbteclipse plugin
+.target
 
-# Tern plugin 
-.tern-project 
+# Tern plugin
+.tern-project
 
-# TeXlipse plugin 
-.texlipse 
+# TeXlipse plugin
+.texlipse
 
-# STS (Spring Tool Suite) 
-.springBeans 
+# STS (Spring Tool Suite)
+.springBeans
 
-# Code Recommenders 
-.recommenders/ 
+# Code Recommenders
+.recommenders/
 
-# Annotation Processing 
-.apt_generated/ 
-.apt_generated_test/ 
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
 
-# Scala IDE specific (Scala & Java development for Eclipse) 
-.cache-main 
-.scala_dependencies 
-.worksheet 
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
 
-# Uncomment this line if you wish to ignore the project description file. 
-# Typically, this file would be tracked if it contains build/dependency configurations: 
-
-#.project 
-
-### Eclipse Patch ### 
-# Spring Boot Tooling 
-
-.sts4-cache/ 
-
-# Eclipse Core 
-.project 
-
-# IDT-specific (Eclipse Java Development Tools) 
-.classpath 
-
-### Java ### 
-
-# Compiled class file 
-*.class 
-
-# Log file 
-*.log 
-
-# BlueJ files 
-*.ctxt 
-
-# Mobile Tools for Java (J2ME) 
-
-.mtj.tmp/ 
-
-# Package Files 
-# 
-*.jar 
-*.war 
-*.nar 
-*.ear 
-*.zip 
-*.tar.gz 
-*.rar 
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml hs_err_pid* 
-# End of https://www.toptal.com/developers/gitignore/api/eclipse,java
-Servers/Tomcat v8.0 Server at localhost-config/server.xml
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project
 .metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
-.metadata/.log
 *.log
-Servers/Tomcat v8.0 Server at localhost-config/server.xml
-.metadata/.plugins/org.eclipse.wst.validation/dep.index
-.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps
-.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
-.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser
-.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps
-.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
-.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
-.metadata/.log
+*.log
+*.snap
+*.snap
