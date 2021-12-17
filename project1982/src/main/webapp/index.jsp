@@ -12,7 +12,7 @@
     <link type="text/css" href="/project1982/resources/css/1_intro.css" rel="stylesheet"/>
 </head>
 <body>
-        <!--메뉴바  ---------------ㅇㅇ----안녕하세요 성훈입니다.------------------------>
+        <!--메뉴바  ---------------ㅇㅇ214----안녕하세요 성훈입니다.------------------------>
         <header class="header" >
          <!-- 로고-->
             
