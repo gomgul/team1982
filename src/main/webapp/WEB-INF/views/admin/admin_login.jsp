@@ -31,13 +31,13 @@
 	}
 </script>
 <body>
-	<form action="#" method="get" id="login-form">
+	<form action="#" method="post" id="login-form">
         <h1>1982 관리자</h1>
         <input name="username" type="text" placeholder="Username" />
         <input name="password" type="password" placeholder="Password" />
         <input type="submit" value="로그인" />
         <div class="login_article">
-            <a href="login.do">1982 홈페이지</a>           
+            <a href="../main.do">1982 홈페이지</a>           
         </div>    
     </form>
 </body>

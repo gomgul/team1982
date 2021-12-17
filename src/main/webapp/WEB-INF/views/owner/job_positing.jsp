@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>job_positing.jsp</title>              <button>수정 </button>
+    <title>job_positing.jsp</title>             
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
 	<link type="text/css" href="/project1982/resources/style/style.css" rel="stylesheet"/>
@@ -60,6 +60,7 @@
                 
                 <div class="body_container_center"> <!-- 중간 메뉴바 시작-->
                     <div>구인공고</div>
+                    <hr/>
                     <div>나의 매장 : 
                         <select name="" id="">
                             <option value="">가산1호점</option>
