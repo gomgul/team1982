@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 .metadata
 
 .metadata/
+=======
+
+/target/
+
+>>>>>>> 3b104e7cd29358daf0b56569561625b7abba518d
 /metadata/
+
+
+.metadata/
+.metadata
+
+
 bin/
 tmp/
 *.tmp
@@ -60,4 +72,7 @@ local.properties
 
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
+
 #.project
+
+
