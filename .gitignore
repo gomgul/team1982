@@ -107,3 +107,6 @@ local.properties
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml hs_err_pid* 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,java
+Servers/Tomcat v8.0 Server at localhost-config/server.xml
+.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+.metadata/.log
