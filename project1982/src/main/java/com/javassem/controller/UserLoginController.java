@@ -40,7 +40,7 @@ public class UserLoginController {
 			return "/user/user_login";
 			
 		}else{
-			return "main";
+			return "/user/userMain";
 		}
 	}
 	
