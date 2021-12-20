@@ -34,7 +34,7 @@
                    마이페이지
                    </a>
                    <!--카트  -->
-                   <a href="getBoardList.do">
+                   <a href="userBoard.do">
                    고객센터
                        <!--카트 상품-->
                        

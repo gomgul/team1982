@@ -34,7 +34,7 @@ public class BoardController {
 	}
 	
 	// 게시판 목록 보기
-	@RequestMapping("/getBoardList.do")
+	@RequestMapping("/userBoard.do")
 	public void select(String searchCondition, String searchKeyword, Model m){
 		HashMap map = new HashMap();
 		map.put("searchCondition", searchCondition);

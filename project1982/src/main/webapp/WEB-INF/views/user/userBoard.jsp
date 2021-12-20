@@ -2,19 +2,18 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>board.jsp</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
-  	<link type="text/css" href="/project1982/resources/style/style.css" rel="stylesheet"/>
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"> -->
+  	<!-- <link type="text/css" href="/project1982/resources/style/style.css" rel="stylesheet"/> -->
     <link type="text/css" href="/project1982/resources/style/header.css" rel="stylesheet"/>
+	<title>글 목록</title>
 </head>
 <body>
         <!--메뉴바  ------------------------------------------------->
@@ -47,21 +46,11 @@
                </div>
    
            </header>
+<!-- -----------메인---------------- -->
 
-    <!-- 메인 ---------------------------------------------------------------->
-        <main>
-            <ul class="left_nav">
-                <li class="left_nav_text"><a class="home" href="userMain.do">홈</a></li>
-            </ul>
-
-            <div class="body_container"> <!-- 페이지 컨테이너 시작-->
-             
-                <div class="body_container_center"> <!-- 중간 메뉴바 시작-->
-                   <div class="body_container_center_title"> 고객센터</div>
-                   <div class="search_input">
-                   
-                   <!-- 검색부분 추가 -->
-                   <form action='getBoardList.do' method='get'>
+		<h1>게시글 목록</h1>
+		                   <!-- 검색부분 추가 -->
+                   <form action='userBoard.do' method='get'>
                        <select name="" id="" >
                            <option value="title">제목</option>
                            <option value="content">내용</option>
@@ -71,17 +60,17 @@
 						<input type='submit' value='검색'>
 					</form>
                    </div>
-                   
-         <table border="1">
-			<tr id="table_th">
-				<th bgcolor="orange" width="10" >번호</th>
-				<th bgcolor="orange" width="20" >제목</th>
-				<th bgcolor="orange" width="15" >작성자</th>
-				<th bgcolor="orange" width="15" >등록일</th>
-				<th bgcolor="orange" width="10" >조회수</th>
-				<!-- 추가 -->	
+		
+	<table border="1">
+			<tr>
+				<th bgcolor="orange" width="100" >번호</th>
+				<th bgcolor="orange" width="200" >제목</th>
+				<th bgcolor="orange" width="150" >작성자</th>
+				<th bgcolor="orange" width="150" >등록일</th>
+				<th bgcolor="orange" width="100" >조회수</th>
+				<!-- 추가 -->
 			</tr>
-			<c:forEach items="${boardList}" var="board">
+			<c:forEach items="${boardList }" var="board">
 				<!-- 프라퍼티이름 변경 -->
 				<tr>
 					<td>${board.b_id }</td>
@@ -95,41 +84,13 @@
 			</c:forEach>
 		</table>
 		<br> <a href="insertBoard.do">새글 등록</a>
-                   
-                       <div class="links">
-                        <a href="#">&laquo;</a>
-                            <a class="active" href="#">1</a> 
-                            <a href="#">2</a> 
-                            <a href="#">3</a> 
-                            <a href="#">4</a> 
-                        <a href="#">&raquo;</a>
-                        </div>
-                   </div>
-                </div><!--중간 메뉴바 종료-->
-               
-           
-            </div><!-- 페이지 컨테이너 종료--       
-        
-        </main>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
- 
-
-
-
-
-
-
-<!-- footer --------------------------------------------------------------------->
+		
+		
+		
+		
+		
+		
+		<!-- footer --------------------------------------------------------------------->
     <footer>
         <div id="footer">
             <div class="wrap_inner">
@@ -195,6 +156,6 @@
         </div>
 
     </footer>
-
+		
 </body>
 </html>
