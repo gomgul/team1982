@@ -51,10 +51,10 @@
 		<h1>게시글 목록</h1>
 		                   <!-- 검색부분 추가 -->
                    <form action='userBoard.do' method='get'>
-                       <select name="" id="" >
-                           <option value="title">제목</option>
-                           <option value="content">내용</option>
-                           <option value="writer">작성자</option>
+                       <select name="searchCondition" id="" >
+                           <option value="b_title">제목</option>
+                           <option value="b_content">내용</option>
+                           <option value="b_name">작성자</option>
                         </select>
 						<input type='text' name='searchKeyword'>
 						<input type='submit' value='검색'>
