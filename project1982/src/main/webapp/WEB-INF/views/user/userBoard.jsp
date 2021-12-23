@@ -11,10 +11,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"> -->
-  	<!-- <link type="text/css" href="/project1982/resources/style/style.css" rel="stylesheet"/> -->
+  	<link type="text/css" href="/project1982/resources/style/style.css" rel="stylesheet"/>
     <link type="text/css" href="/project1982/resources/style/header.css" rel="stylesheet"/>
 	<title>글 목록</title>
 </head>
+<style>
+	h2 {
+		text-align: center;
+	}
+	table {
+		width: 100%;
+	}
+	#outter {
+		display: block;
+		width: 60%;
+		margin: auto;
+	}
+	a {
+		text-decoration: none;
+	}
+</style>
+<script>
+	function selChange() {
+		var sel = document.getElementById('cntPerPage').value;
+		location.href="/project1982/user/userBoard.do?nowPage=${paging.nowPage}&cntPerPage="+sel;
+	}
+</script>
+
 <body>
         <!--메뉴바  ------------------------------------------------->
         <header class="header" >
@@ -47,10 +70,10 @@
    
            </header>
 <!-- -----------메인---------------- -->
-
-		<h1>게시글 목록</h1>
 		                   <!-- 검색부분 추가 -->
-                   <form action='userBoard.do' method='get'>
+		        <div class="chart">
+		        <h1>게시글 목록</h1>
+                   <form action='/project1982/user/userBoard.do' method='get'>
                        <select name="searchCondition" id="" >
                            <option value="b_title">제목</option>
                            <option value="b_content">내용</option>
@@ -59,8 +82,22 @@
 						<input type='text' name='searchKeyword'>
 						<input type='submit' value='검색'>
 					</form>
-                   </div>
-		
+				</div>
+                   
+ 			<div id="outter">
+				   <div style="float: right;">
+						<select id="cntPerPage" name="sel" onchange="selChange()">
+							<option value="5"
+								<c:if test="${paging.cntPerPage == 5}">selected</c:if>>5줄 보기</option>
+							<option value="10"
+								<c:if test="${paging.cntPerPage == 10}">selected</c:if>>10줄 보기</option>
+							<option value="15"
+								<c:if test="${paging.cntPerPage == 15}">selected</c:if>>15줄 보기</option>
+							<option value="20"
+								<c:if test="${paging.cntPerPage == 20}">selected</c:if>>20줄 보기</option>
+						</select>
+					</div>
+					
 	<table border="1">
 			<tr>
 				<th bgcolor="orange" width="100" >번호</th>
@@ -70,7 +107,7 @@
 				<th bgcolor="orange" width="100" >조회수</th>
 				<!-- 추가 -->
 			</tr>
-			<c:forEach items="${boardList }" var="board">
+			<c:forEach items="${boardList}" var="board">
 				<!-- 프라퍼티이름 변경 -->
 				<tr>
 					<td>${board.b_id }</td>
@@ -86,7 +123,25 @@
 		<br> <a href="insertBoard.do">새글 등록</a>
 		
 		
-		
+	<div style="display: block; text-align: center;">		
+		<c:if test="${paging.startPage != 1 }">
+			<a href="/project1982/user/userBoard.do?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+		</c:if>
+		<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
+			<c:choose>
+				<c:when test="${p == paging.nowPage }">
+					<b>${p}</b>
+				</c:when>
+				<c:when test="${p != paging.nowPage }">
+					<a href="/project1982/user/userBoard.do?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+				</c:when>
+			</c:choose>
+		</c:forEach>
+		<c:if test="${paging.endPage != paging.lastPage}">
+			<a href="/project1982/user/userBoard.do?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+		</c:if>
+	</div>
+</div>	
 		
 		
 		

@@ -1,5 +1,5 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-
+<%@taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE>
 <html>
 <head>
@@ -14,7 +14,7 @@
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
 					<td bgcolor="orange" width="70">제목</td>
-					<td align="left"><input name="title" type="text"
+					<td align="left"><input name="b_title" type="text"
 						value="${board.b_title }" /></td>
 				</tr>
 				<tr>
@@ -23,8 +23,7 @@
 				</tr>
 				<tr>
 					<td bgcolor="orange">내용</td>
-					<td align="left"><textarea name="content" cols="40" rows="10">
-						${board.b_content }</textarea></td>
+					<td align="left"><textarea name="b_content" cols="40" rows="10">${board.b_content }</textarea></td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">등록일</td>
@@ -34,15 +33,26 @@
 					<td bgcolor="orange">조회수</td>
 					<td align="left">${board.b_count }</td>
 				</tr>
+				<!-- #### 첨부파일을 보여주고자 한다면 -->
+				<c:if test="${board.b_realfname != null}">
 				<tr>
-					<td colspan="2" align="center"><input type="submit"
-						value="글 수정" /></td>
+					<td colspan="2" align="center">
+					<%-- <img src="resources/upload/${board.b_fname}" width='500' height='400'> --%>
+					<a download='${board.b_fname}' href='resources/upload/${board.b_realfname}'>${board.b_fname}</a>
+					</td>
 				</tr>
+				</c:if>
+				<tr>
+					<td colspan="2" align="center">
+					<input type="submit" value="글 수정" /></td>
+				</tr>
+				
+				
 			</table>
 		</form>
 		<hr>
-		<a href="insertBoard.do">글등록 하기</a>&nbsp;&nbsp;&nbsp; 
+		<a href="insertBoard.do">글등록</a>&nbsp;&nbsp;&nbsp; 
 		<a href="deleteBoard.do?b_id=${board.b_id }">글삭제</a>&nbsp;&nbsp;&nbsp;
-		<a href="userBoard.do">글목록으로 가기</a>
+		<a href="getBoardList.do">글목록</a>
 </body>
 </html>

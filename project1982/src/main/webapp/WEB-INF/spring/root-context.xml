@@ -32,6 +32,9 @@
 	  	<list>
 	  		<value>com.javassem.domain.UserVO</value>
 	  		<value>com.javassem.domain.BoardVO</value>
+	  		<value>com.javassem.util.PagingVO</value>
+	  		<value>com.javassem.domain.StoreVO</value>
+	  		<value>com.javassem.domain.SongLocationVO</value>
 	  	</list>
 	  </property>
 	 </bean>

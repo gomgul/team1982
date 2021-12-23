@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.javassem.domain.BoardVO;
+import com.javassem.util.PagingVO;
 
 
 
@@ -23,4 +24,9 @@ public interface BoardService {
 
 	// 글 목록 조회
 	List<BoardVO> getBoardList(HashMap map);
+	
+	public int countBoard();
+
+	List<BoardVO> selectBoard(PagingVO vo);	
+	
 }

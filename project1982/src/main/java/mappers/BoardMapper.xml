@@ -62,16 +62,19 @@
 		$ : Statement를 사용 -> 문자열인 경우도 '' 안 붙음
 	 -->
 	<select id="getBoardList" resultType="BoardVO"  parameterType="hashmap">
-		
-		SELECT *
-		FROM uploadtemp
-		<where>
+		SELECT * FROM (SELECT @rownum:=@rownum+1 RN, A.* FROM
+		(SELECT * FROM uploadtemp ORDER BY b_id DESC) A, (SELECT @rownum:=0) r) B
+		where
 			<if test="searchCondition != null">
-				${searchCondition} LIKE '%${searchKeyword}%'
-			</if>
-		</where>		
-		ORDER BY b_id DESC
-		
+		 		B.${searchCondition} LIKE '%${searchKeyword}%' AND
+		 	</if>
+		B.RN BETWEEN ${start} AND ${end};
+			
 	</select>
+		<select id="countboard" resultType="int">
+		SELECT COUNT(*) FROM uploadtemp
+	</select>
+	
+
 	
 </mapper>

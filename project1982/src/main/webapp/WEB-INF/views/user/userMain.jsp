@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>userMain.jsp</title>
+    <title>main.jsp</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
-    <link type="text/css" href="/project1982/resources/css/4_main.css" rel="stylesheet"/>
+   	<link type="text/css" href="/project1982/resources/css/4_main.css" rel="stylesheet"/>
 </head>
 <body>
         <!--메뉴바  ------------------------------------------------->
@@ -49,95 +49,48 @@
                 <div class="main_title">내 주변 일자리</div>
                 <div  class="main">
                   <div id="map" style="width:500px;height:450px;margin-top: 50px;border: 1px solid black;"></div>
-                  
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7566b035bd910a38bdab34848a049ad8"></script>
-    <script>
-		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-		    mapOption = { 
-		        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-		        level: 10 // 지도의 확대 레벨 
-		    }; 
-		
-		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-		
-		// HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
-		if (navigator.geolocation) {
-		    
-		    // GeoLocation을 이용해서 접속 위치를 얻어옵니다
-		    navigator.geolocation.getCurrentPosition(function(position) {
-		        
-		        var lat = position.coords.latitude, // 위도
-		            lon = position.coords.longitude; // 경도
-		        
-		        var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-		            message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
-		        
-		        // 마커와 인포윈도우를 표시합니다
-		        displayMarker(locPosition, message);
-		            
-		      });
-		    
-		} else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
-		    
-		    var locPosition = new kakao.maps.LatLng(33.450701, 126.570667),    
-		        message = 'geolocation을 사용할수 없어요..'
-		        
-		    displayMarker(locPosition, message);
-		}
-		
-		// 지도에 마커와 인포윈도우를 표시하는 함수입니다
-		function displayMarker(locPosition, message) {
-		
-		    // 마커를 생성합니다
-		    var marker = new kakao.maps.Marker({  
-		        map: map, 
-		        position: locPosition
-		    }); 
-		    
-		    var iwContent = message, // 인포윈도우에 표시할 내용
-		        iwRemoveable = true;
-		
-		    // 인포윈도우를 생성합니다
-		    var infowindow = new kakao.maps.InfoWindow({
-		        content : iwContent,
-		        removable : iwRemoveable
-		    });
-		    
-		    // 인포윈도우를 마커위에 표시합니다 
-		    infowindow.open(map, marker);
-		    
-		    // 지도 중심좌표를 접속위치로 변경합니다
-		    map.setCenter(locPosition);      
-}    
-</script>
-                  <div>  
+					<script src="https://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7566b035bd910a38bdab34848a049ad8&libraries=services"></script>
+					<script src='/project1982/resources/js/locationExample4.js' type="text/javascript"></script>
+
+                  <div id="searchPost" style="width:700px;height:500px">  
+                       <div class="main_right"></div>
+                       <div class="main_right"></div>
                        <div class="main_right"></div>
                        <div class="main_right"></div>
                   </div>
-                  <div>
-                        <div class="main_right"></div>
-                        <div class="main_right"></div>
-                  </div>
-                </div>
-                <div id="divPaging">
-                    <div>◀</div>
-                       <div><b>1</b></div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>▶</div>
                 </div>
                 
+               <div id="SongPagingMap">
+                <div id="divPagingMap">
+                    <div>2</div>
+                    <div>1</div>
+                </div>
             </div>
-           
+
+			<form name="search-form" method='get'>
+					<input type='text' name='CenterLocation_y' id='CenterLocation_y' >
+					<input type='text' name='CenterLocation_x' id='CenterLocation_x' >
+					<input type= 'text' name='pageNum' id='pageNum'>
+					<select name='searchCondition'>
+						<option value='shop_name'>가게이름</option>
+						<option value='road_address'>도로명 주소</option>
+					</select>
+					<input type='text' name='searchKeyword'>
+					<input type='button' id="em" value='검색'>
+			</form>
+			
+			<button id="mapPanTo">내 현재 위치로  이동하기</button>
+			<button id="moveCenterLocation">검색 위치 변경하기</button>
+
+
             <div>
                 <div class="main_title">추천 일자리</div>
                 <div  class="main_article">
                        <div class="main_right"></div>
                        <div class="main_right"></div>
                        <div class="main_right"></div>
-                        <div class="main_right"></div>
+                       <div class="main_right"></div>
                 </div>
                 <div id="divPaging">
                     <div>◀</div>
@@ -187,7 +140,6 @@
                     </div>
                 </div>
 
-
                 <div class="right_area">
                     <div class="right_ul">
                         <p>이용약관 | </p>
@@ -225,7 +177,6 @@
                 </div>        
             </div>
         </div>
-
     </footer>
 </body>
 </html>

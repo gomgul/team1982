@@ -6,8 +6,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="user">
 	
 	<insert id="userInsert" parameterType="UserVO">
-		INSERT INTO userinfo(userid, userpass, username, userbirth, userpn, usermail, userdate)
-		VALUES(#{userid}, #{userpass}, #{username}, #{userbirth}, #{userpn}, #{usermail}, now())
+		INSERT INTO userinfo(usernum,userid, userpass, userpass2, username, 
+			userpn, usermail, userbirth, userdate)
+		VALUES(#{usernum}, #{userid}, #{userpass}, #{userpass2}, #{username}, 
+			#{userpn}, #{usermail}, #{userbirth}, now())
 	</insert>
 	
 	<select id='idCheck' parameterType="UserVO" resultType="UserVO">
@@ -22,7 +24,4 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			</where>
 	</select>
 	<!-- userid=#{userid} AND userpass=#{userpass} -->
-	
-
-
 </mapper>

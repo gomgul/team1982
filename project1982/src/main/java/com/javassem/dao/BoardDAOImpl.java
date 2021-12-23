@@ -2,12 +2,14 @@ package com.javassem.dao;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.javassem.domain.BoardVO;
+import com.javassem.util.PagingVO;
 
 
 
@@ -40,4 +42,14 @@ public class BoardDAOImpl implements BoardDAO{
 		System.out.println("===> Mybatis getBoardList() 호출");
 		return mybatis.selectList("BoardDAO.getBoardList", map);
 	}
+
+	public int countBoard() {
+		return mybatis.selectOne("BoardDAO.countboard");
+	}
+
+	public List<BoardVO> selectBoard(PagingVO vo) {
+		 List<BoardVO> result = mybatis.selectList("BoardDAO.selectBoard", vo);
+			return result;
+		}	
 }
+

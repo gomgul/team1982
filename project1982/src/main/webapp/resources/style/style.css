@@ -234,3 +234,13 @@ ul, li{
   background-color: lime;
   border-radius: 25px;
 }
+
+.chart{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+
+
